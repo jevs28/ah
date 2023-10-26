@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1. December</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            font-family: 'Bahnschrift', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>1. December</p>
+</body>
+</html>

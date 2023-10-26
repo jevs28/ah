@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advent Calendar</title>
+    <style>
+        body {
+
+            background: url('black-dots.gif') repeat-y;
+            font-family: 'Bahnschrift', sans-serif;
+            
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            margin-top: 70px;
+        }
+
+        .button {
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            font-family: 'Bahnschrift', sans-serif;
+            border: none;
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.5s;
+            display: flex;
+            justify-content: center; /* Horizontally center the text */
+            align-items: center; /* Vertically center the text */
+            text-decoration: none; /* Remove text underline */
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 90px rgba(0, 0, 0, 1);
+            flip
+        }
+        .flip {
+            animation: flip 1.0s ease-in-out; /* Flip animation when hover on button */
+        }
+
+        #typewriter {
+            font-size: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #000;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+        .snowflake {
+            position: absolute;
+            background-color: #000;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            animation: fall 10s linear infinite;
+        }
+
+         @keyframes fall {
+            0% {
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="typewriter">Ah zmišljotine</div>
+    <div class="button-container">
+        <!-- Create 24 buttons -->
+        <a class="button" href="day 1.html" target="_blank">1. december</a>
+        <a class="button" href="day 2.html" target="_blank">2. december</a>
+        <a class="button" href="day 3.html" target="_blank">3. december</a>
+        <a class="button" href="day 1.html" target="_blank">4. december</a>
+        <a class="button" href="day 2.html" target="_blank">5. december</a>
+        <a class="button" href="day 3.html" target="_blank">6. december</a>
+        <a class="button" href="day 1.html" target="_blank">7. december</a>
+        <a class="button" href="day 2.html" target="_blank">8. december</a>
+        <a class="button" href="day 3.html" target="_blank">9. December</a>
+        <a class="button" href="day 1.html" target="_blank">10. December</a>
+        <a class="button" href="day 2.html" target="_blank">11. December</a>
+        <a class="button" href="day 3.html" target="_blank">12. December</a>
+        <a class="button" href="day 1.html" target="_blank">13. December</a>
+        <a class="button" href="day 2.html" target="_blank">14. December</a>
+        <a class="button" href="day 3.html" target="_blank">15. December</a>
+        <a class="button" href="day 1.html" target="_blank">16. December</a>
+        <a class="button" href="day 2.html" target="_blank">17. December</a>
+        <a class="button" href="day 3.html" target="_blank">18. December</a>
+        <a class="button" href="day 1.html" target="_blank">19. December</a>
+        <a class="button" href="day 2.html" target="_blank">20. December</a>
+        <a class="button" href="day 3.html" target="_blank">21. December</a>
+        <a class="button" href="day 1.html" target="_blank">22. December</a>
+        <a class="button" href="day 2.html" target="_blank">23. December</a>
+        <a class="button" href="day 3.html" target="_blank">24. December</a>
+        
+        <!-- Add buttons for all 24 days with respective href links -->
+</div>
+    <div id="snowfall"></div>
+    <script>
+        // Generate and append snowflakes dynamically
+        function createSnowflakes() {
+            const snowfallContainer = document.getElementById('snowfall');
+            const numSnowflakes = 50; // Adjust the number of snowflakes
+
+            for (let i = 0; i < numSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = `${Math.random() * 100}%`;
+                snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Adjust falling speed
+                snowfallContainer.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes(); // Initialize snowfall
+     </script>
+</body>
+</html>

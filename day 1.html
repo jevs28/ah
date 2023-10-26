@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1. December</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 12px;
+            font-family: 'Bahnschrift', sans-serif;
+            overflow: hidden; /* Hide overflow for snowflakes */
+            margin: 0;
+            padding: 0;
+}
+#typewriter {
+            font-size: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+            text-align: center;
+            padding-top: 200px;
+        }
+
+        .snowflake {
+            position: absolute;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+#typewriter {
+            font-size: 100px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #000;
+            text-align: center;
+            padding-top: 100px;
+}
+        }
+    </style>
+</head>
+<body>
+    <div id="snowfall"></div>
+    <script>
+        // Generate and append snowflakes dynamically
+        function createSnowflakes() {
+            const snowfallContainer = document.getElementById('snowfall');
+            const numSnowflakes = 50; // Adjust the number of snowflakes
+
+            for (let i = 0; i < numSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                snowflake.style.left = `${Math.random() * 100}%`;
+                snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Adjust falling speed
+                snowfallContainer.appendChild(snowflake);
+            }
+
+        }
+
+        createSnowflakes(); // Initialize snowfall
+    </script>
+</body>
+       <div id="typewriter">Za kaj slon ne uporablja računalnika?</div>  
+       <div id="typewriter">Ker ni zaSlona.</div>  
+</body>
+</html>
+
+
